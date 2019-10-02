@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #414141;
+  background-color: #F8F8F8;
+  text-align: center;
+  padding: 40px;
+}
+
+h1, p {
+  margin-bottom: 40px;
+}
+
+
+.button {
+  color: #FFF;
+  background-color: #5995DA;    /* Blue */
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #5D6063;    /* Dark gray */
+  border-radius: 5px;
+  width: 400px;
+  margin: 20px auto;
+}
