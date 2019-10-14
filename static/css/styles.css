@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding 0;
+  box-sizing: border-box;
+}
+
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product_picture {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000000;
+}
+
+.container div {
+  width: 100px;
+  height: 100px;
+}
+
+body {
+  color: #414141;
+  background-color: #FFFFFF;
+  text-align: center;
+  padding: 40px;
+}
+
+
+h1, p {
+  margin-bottom: 40px;
+  font-family: PT Sans; /*Courier New*/
+}
+
+ul {
+  list-style-type: none;
+  margin: 20px auto;
+}
+
+li {
+  margin: 20px auto;
+}
+
+.logo {
+  width: 300px;
+  height: 140px;
+}
+
+.submit {
+  margin: 60px auto;
+}
+
+.button {
+  /*display: block;*/
+  text-decoration: none;
+  color: #FFF;
+  background-color: #0080FF;    /* Blue #5995DA*/
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #5D6063;    /* Dark gray */
+  border-radius: 5px;
+  width: 100px;
+  height: 10px;
+  margin: 20px 20px 20px 20px;
+}
+
+.button:hover,
+.button:visited:hover {
+  background-color: #73C2FB;    /*#76AEED*/
+}
+
+.button:active,
+.button:visited:active {
+  background-color: #5995DA;;
+}

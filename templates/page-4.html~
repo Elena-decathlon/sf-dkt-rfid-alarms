@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head lang='en'>
+    <title>My Simple web app</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/css/styles.css"/>
+  </head>
+  <body>
+    <img src="/static/images/decathlon_logo.png"/>
+    <h1>Monitoring</h1>
+    <p>Cheking the products below</p>
+    <script scr="script.js"></script>
+    <div id="root">
+      <div>
+	<div>
+	  <img src="{{ pics }}"; height="400"; width="100"/>
+	</div>
+      </div>
+    </div>    
+     <p>{{ name }}<p>
+    <a class="button" href="">Deactivate</a>
+    <a class="button" href="">Cancel</a>
+  </body>
+</html>
