@@ -2,7 +2,7 @@
 <html>
   <head lang='en'>
     <title>My Simple web app</title>
-    <meta charset="utf-8">
+    <meta charset="utf-8" http-equiv="refresh" content="5">
     <link rel="stylesheet" href="../static/css/styles.css"/>
   </head>
   <body>
@@ -11,11 +11,12 @@
     <script scr="script.js"></script>
     <div id="root">
       <div>
-	<div style="overflow:scroll; height:400px">
+	<div style="overflow:scroll; height:400px;">
     <ul>
     {% for item in pics %}
     <li><img class="product_picture"; src="{{ item.pic }}"; alt="product picture"/></li>
     <li>{{ item.brand }} : {{ item.name }} (size {{ item.size }})</li>
+    <li>Additional info: EPC: {{ item.epc }}, EAN13: {{item.ean13}}, Serial Number: {{item.serial}}</li>
     <li>Alert created : {{ item.time }}</li>
     <li><a class="button" href="">Deactivate</a><a class="button" href="">Cancel</a></li>
     <li><hr></li>
