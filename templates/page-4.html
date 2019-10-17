@@ -8,35 +8,37 @@
   </head>
   <body>
     <!--<body background="../static/images/decathlon_layout.jpg">-->
-    <div class="logo_color">
-      <img src="../static/images/logo_color.png" alt="logo">
-        <div class="logo">
-          <img src="../static/images/logo.png" alt="logo">
-        </div>
-    </div>
     <div class="monitoring">
+      <div class="logo_color_monitoring">
+        <img src="../static/images/logo_color.png" alt="logo">
+          <div class="logo_monitoring">
+            <img src="../static/images/logo.png" alt="logo">
+          </div>
+      </div>
       <h1 class="title_monitoring">Monitoring</h1>
       <p class="title_monitoring_2">Please, check the products below</p>
       <!--<script scr="script.js"></script>-->
       <!---<div id="root">-->
       <!--<div>-->
-	    <div class="display" style="overflow:scroll; height:380px;">
+	    <div class="display" style="overflow:scroll; height:490px; width: 700px; margin-left: 160px;">
         <ul>
           {% for item in pics %}
             <li>
                 <img class="product_picture"; src="{{ item.pic }}"; alt="product picture"/>
             </li>
             <li class="product_name">
-                {{ item.brand }} {{ item.name }} {{ item.size }}
+                <b>{{ item.brand }}</b> {{ item.name }} <b>{{ item.size }}</b>
             </li>
             <li class="additional_info">
-                Additional info: EPC: {{ item.epc }}, EAN13: {{item.ean13}}, Serial Number: {{item.serial}}
+                <p>Additional info</p> EPC <span class="border">{{ item.epc }}</span>
+                <p>EAN13<span class="border">{{item.ean13}}</span>
+                Serial Number <span class="border">{{item.serial}}</span></p>
             </li>
             <li class="alert">
-                Alert created : {{ item.time }}
+                Alert created  <span class="border">{{ item.time }}</span>
             </li>
-            <li class="deactivate">
-                <a class="button" href="">Deactivate</a><a class="button" href="">Cancel</a>
+            <li>
+                <a class="button deactivate" href="">Deactivate</a><a class="button cancel" href="">Cancel</a>
             </li>
             <li><hr></li>
             {% endfor %}
