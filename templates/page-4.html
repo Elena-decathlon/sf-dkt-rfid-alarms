@@ -2,35 +2,52 @@
 <html>
   <head lang='en'>
     <title>My Simple web app</title>
-    <meta charset="utf-8" http-equiv="refresh" content="5">
+    <!---<meta charset="utf-8" http-equiv="refresh" content="5">-->
+    <meta charset="utf-8">
     <link rel="stylesheet" href="../static/css/styles.css"/>
   </head>
   <body>
-    <h1>Monitoring</h1>
-    <p>Cheking the products below</p>
-    <script scr="script.js"></script>
-    <div id="root">
-      <div>
-	<div style="overflow:scroll; height:400px;">
-    <ul>
-    {% for item in pics %}
-    <li><img class="product_picture"; src="{{ item.pic }}"; alt="product picture"/></li>
-    <li>{{ item.brand }} : {{ item.name }} (size {{ item.size }})</li>
-    <li>Additional info: EPC: {{ item.epc }}, EAN13: {{item.ean13}}, Serial Number: {{item.serial}}</li>
-    <li>Alert created : {{ item.time }}</li>
-    <li><a class="button" href="">Deactivate</a><a class="button" href="">Cancel</a></li>
-    <li><hr></li>
-    {% endfor %}
-  </ul>
-  <button> <a href="/monitoring">Click me</a></button>
-	</div>
-  <form class="submit" action="/monitoring" method="POST">
-    <a class="button" type="submit" href="">Refresh page</a>
-  </form>
-  <form class="submit" method="GET">
-    <a class="button" type="submit" href="/gate-selection">Back</a>
-  </form>
-      </div>
+    <!--<body background="../static/images/decathlon_layout.jpg">-->
+    <div class="logo_color">
+      <img src="../static/images/logo_color.png" alt="logo">
+        <div class="logo">
+          <img src="../static/images/logo.png" alt="logo">
+        </div>
     </div>
-    </body>
+    <div class="monitoring">
+      <h1 class="title_monitoring">Monitoring</h1>
+      <p class="title_monitoring_2">Please, check the products below</p>
+      <!--<script scr="script.js"></script>-->
+      <!---<div id="root">-->
+      <!--<div>-->
+	    <div class="display" style="overflow:scroll; height:380px;">
+        <ul>
+          {% for item in pics %}
+            <li>
+                <img class="product_picture"; src="{{ item.pic }}"; alt="product picture"/>
+            </li>
+            <li class="product_name">
+                {{ item.brand }} {{ item.name }} {{ item.size }}
+            </li>
+            <li class="additional_info">
+                Additional info: EPC: {{ item.epc }}, EAN13: {{item.ean13}}, Serial Number: {{item.serial}}
+            </li>
+            <li class="alert">
+                Alert created : {{ item.time }}
+            </li>
+            <li class="deactivate">
+                <a class="button" href="">Deactivate</a><a class="button" href="">Cancel</a>
+            </li>
+            <li><hr></li>
+            {% endfor %}
+        </ul>
+	    </div>
+      <form class="submit refresh" action="/monitoring" method="POST">
+        <a type="submit" href=""><img src="../static/images/refresh.png"></a>
+      </form>
+      <form class="submit back_to_gates" method="GET">
+        <a type="submit" href="/gate-selection"><img src="../static/images/back.png"></a>
+      </form>
+    </div>
+  </body>
 </html>

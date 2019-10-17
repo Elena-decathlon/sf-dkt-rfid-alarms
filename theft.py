@@ -55,7 +55,5 @@ def get_pic():
 #        dic.update({"ean13": ean13})
 #        dic.update({"serial": serial})
         info_list.append(dic)
-    print(info_list)
     return(info_list)
 
-get_pic()

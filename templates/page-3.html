@@ -6,18 +6,25 @@
     <link rel="stylesheet" href="../static/css/styles.css"/>
   </head>
   <body>
-    <h1>Gates selection</h1>
-    <p>Please, select the gates</p>
-    <form class="submit" action="/monitoring-exit" method="GET">
-      <a class="button" type="submit" href="/monitoring-exit">Entrance/Exit gates</a>
-    </form>
-    <form class="submit" action="/monitoring-restroom" method="GET">
-      <a class="button" type="submit" href="/monitoring-restroom">Restroom gates</a>
-    </form>
-    <form class="submit" method="GET">
-      <a class="button" type="submit" href="/store-selection">Back</a>
-    </form>
-    <div>
+    <!--<body background="../static/images/background.jpg">-->
+    <div class="logo_color">
+      <img src="../static/images/logo_color.png" alt="logo">
+        <div class="logo">
+          <img src="../static/images/logo.png" alt="logo">
+        </div>
+    </div>
+    <div class="information">
+        <h1 class="title">Gates selection</h1>
+        <p class="title_2">Please, select the gates</p>
+      <form class="submit entrance_exit" action="/monitoring-exit" method="GET">
+        <a class="button" type="submit" href="/monitoring-exit">ENTRANCE/EXIT</a>
+      </form>
+      <form class="submit restroom" action="/monitoring-restroom" method="GET">
+        <a class="button" type="submit" href="/monitoring-restroom">RESTROOM</a>
+      </form>
+      <form class="submit back" method="GET">
+        <a type="submit" href="/store-selection"><img src="../static/images/back.png" alt="back"/></a>
+      </form>
     </div>
   </body>
 </html>
