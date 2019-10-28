@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head lang='en'>
+    <title>My Simple web app</title>
+    <!---<meta charset="utf-8" http-equiv="refresh" content="5">-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="../static/css/styles.css"/>
+  </head>
+  <body>
+    <!--<body background="../static/images/decathlon_layout.jpg">-->
+    <div class="monitoring">
+      <div class="logo_color_monitoring">
+        <img src="../static/images/logo_color.png" alt="logo">
+          <div class="logo_monitoring">
+            <img src="../static/images/logo.png" alt="logo">
+          </div>
+      </div>
+      <h1 class="title_monitoring">Monitoring</h1>
+      <p class="title_monitoring_2">Please, check the products below</p>
+      <!--<script scr="script.js"></script>-->
+      <!---<div id="root">-->
+      <!--<div>-->
+	    <div class="display" style="/*overflow:scroll; */margin-left: 0px;">
+        <ul>
+          {% for item in pics %}
+            <li class="product_name">
+                <b>{{ item.brand }}</b> {{ item.name }} <b>{{ item.size }}</b>
+            </li>
+            <li>
+                <img class="product_picture"; src="{{ item.pic }}"; alt="product picture"/>
+            </li>
+            <li class="additional_info">
+                <!--<p>Additional info</p>-->
+                <p>EPC<span class="border">{{ item.epc }}</span></p>
+                <p>EAN13<span class="border">{{item.ean13}}</span></p>
+                <p>Serial Number<span class="border">{{item.serial}}</span></p>
+            </li>
+            <li class="alert">
+                <b>Alert created at: {{ item.time }}</b>
+            </li>
+            <!--<li>
+                <a class="button deactivate" href="">Deactivate</a><a class="button cancel" href="">Cancel</a>
+            </li>-->
+            <li><hr></li>
+            {% endfor %}
+        </ul>
+	    </div>
+      <form class="submit refresh" action="/monitoring" method="POST">
+        <a type="submit" href=""><img src="../static/images/refresh.png"></a>
+      </form>
+    </div>
+    <form class="submit back_to_gates" method="GET">
+      <a type="submit" href="/gates-selection"><img src="../static/images/back_2.png"><span class="backtext">Back to a previous page</span></a>
+    </form>
+    <form class="submit logout" method="POST">
+      <a type="submit" href="/logout"><img src="../static/images/logout.png"><span class="logout">Logout</span></a>
+    </form>
+  </body>
+</html>

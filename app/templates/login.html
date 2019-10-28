@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang='en'>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="../static/css/styles.css"/>
+</head>
+<body>
+    <div class="monitoring">
+      <div class="logo_color_monitoring">
+        <img src="../static/images/logo_color.png" alt="logo">
+          <div class="logo_monitoring">
+            <img src="../static/images/logo.png" alt="logo">
+          </div>
+        </div>
+      <h1 class="title">Login</h1>
+
+      <form class="submit entrance_exit" method="POST" action="/login">
+          {{ form.hidden_tag() }}
+          <span class="login_label">{{ form.email.label }}</span><span class="login_field">{{ form.email(size=20) }}</span>
+          <span class="login_label">{{ form.password.label }}</span><span class="login_field">{{ form.password(size=20) }}</span>
+          <input class="button" type="submit" value="Login">
+      </form>
+      <form class="login" method="GET" action="/login">
+          <!--<a class="button" type="submit" href="">Login</a>-->
+      </form>
+    </div>
+</body>
+</html>
