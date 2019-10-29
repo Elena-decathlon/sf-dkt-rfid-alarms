@@ -21,9 +21,9 @@ def before_request():
     session.permanent = True
     app.permanent_session_lifetime = timedelta(minutes=1)
 
-@flask_app.route('/')
-def index():
-    return "Welcome to Flask"
+#@flask_app.route('/')
+#def index():
+#    return "Welcome to Flask"
 
 @flask_app.route('/login', methods=['GET', 'POST'])
 def login():
