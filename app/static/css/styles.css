@@ -529,3 +529,21 @@ hr {
   height: 45px;
   margin-left: 20px;
 }
+
+.go {
+  position: absolute;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  top: 15em;
+}
+
+.logout {
+  position: absolute;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  top: 10em;
+}
