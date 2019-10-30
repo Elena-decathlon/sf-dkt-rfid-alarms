@@ -19,7 +19,11 @@ import app.theft_r
 @flask_app.before_request
 def before_request():
     session.permanent = True
-    app.permanent_session_lifetime = timedelta(minutes=1)
+    flask_app.permanent_session_lifetime = timedelta(minutes=720)
+
+@login_manager.unauthorized_handler
+def unauthorized():
+    return(render_template("index.html"))
 
 @flask_app.route('/')
 def index():
@@ -56,10 +60,6 @@ def login():
 #def protected():
 #    return("protected area")
 
-@login_manager.unauthorized_handler
-def unauthorized():
-    return("back to a login page")
-
 
 @flask_app.route("/logout")
 @login_required
@@ -79,9 +79,9 @@ def init_db():
     db.create_all()
 
 
-@flask_app.route("/store-selection")
-def store():
-    return(render_template("page-2.html"))
+#@flask_app.route("/store-selection")
+#def store():
+#    return(render_template("page-2.html"))
 
 
 @flask_app.route("/gates-selection")
