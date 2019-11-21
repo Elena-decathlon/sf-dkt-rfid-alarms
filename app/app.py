@@ -21,6 +21,11 @@ def before_request():
     session.permanent = True
     flask_app.permanent_session_lifetime = timedelta(minutes=720)
 
+@flask_app.after_request
+def after_request(response):
+    response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    return(response)
+
 @login_manager.unauthorized_handler
 def unauthorized():
     return(render_template("index.html"))
