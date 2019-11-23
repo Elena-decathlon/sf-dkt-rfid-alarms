@@ -1,13 +1,13 @@
 
-from datetime import datetime, timedelta 
+from datetime import datetime, timedelta
 import json
 import requests
 import sys
 import time
 
-import app.decoder 
+import app.decoder
 
-url = "https://sf-dkt-gates-store-api-s.herokuapp.com/alerts/theft"
+url = "https://sf-dkt-gates-store-api-2214.herokuapp.com/alerts/theft"
 
 payload = "{\n    \"api_key\": \"u7dcdj52df45y7a0avcba8idu56g17d4\",\n    \"id_gate\": 2\n}"
 
