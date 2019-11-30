@@ -47,7 +47,8 @@ def get_pic():
             size = i["product_size"]
         t_str = i["created"]
         t_str_rep = t_str.replace(" GMT", "")                             #deleting the timezone name form the string
-        time = datetime.strptime(t_str_rep, '%a, %d %b %Y %H:%M:%S')    #converting str to datetime object
+        t_time = datetime.strptime(t_str_rep, '%a, %d %b %Y %H:%M:%S')    #converting str to datetime object
+        time = t_time - timedelta(hours=8, minutes = 0)                   #converting time to a PTZ
         epc = i["product_epc"]
         ean13 = app.decoder.EPC_decoder_EAN13(epc)
         serial = app.decoder.EPC_decoder_serial(epc)
