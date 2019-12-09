@@ -14,10 +14,10 @@ headers = {
     'Content-Type': "application/json",
     'Accept': "*/*",
     'Cache-Control': "no-cache",
-    'Host': "sf-dkt-gates-store-api-s.herokuapp.com",
+    'Host': "sf-dkt-gates-store-api-2214.herokuapp.com",
     'Accept-Encoding': "gzip, deflate",
     'Content-Length': "72",
-    'Referer': "https://sf-dkt-gates-store-api-s.herokuapp.com/alerts/theft",
+    'Referer': "https://sf-dkt-gates-store-api-2214.herokuapp.com/alerts/theft",
     'Connection': "keep-alive",
     'cache-control': "no-cache"
     }
@@ -29,6 +29,7 @@ def get_pic():
     '''
     response = requests.request("GET", url, data=payload, headers=headers)
     obj = response.json()
+    gates = "entrance"
     info_list = []
     data = obj["data"]["results_data"]
     ln = len(data)
@@ -53,6 +54,7 @@ def get_pic():
         serial = app.decoder.EPC_decoder_serial(epc)
         dic.update({"name": name, "pic": pic, "brand": brand, "size": size, "time": time, "epc": epc, "ean13": ean13, "serial": serial})
         info_list.append(dic)
+#        print(info_list)
     return(info_list)
 
 get_pic()
