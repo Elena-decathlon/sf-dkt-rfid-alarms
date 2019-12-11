@@ -224,7 +224,27 @@ html, body {
   position: absolute;
   width: 18em;
   height: 10em;
-  top: 4.2em;
+  top: 3.8em;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 23px;
+  text-align: center;
+
+  color: #141414;
+}
+
+.title_monitoring_3 {
+  position: absolute;
+  width: 18em;
+  height: 10em;
+  top: 5.4em;
   left:0;
   right:0;
   margin-left:auto;
@@ -437,7 +457,9 @@ p {
 .login_label {
   font-size: 14px;
   text-align: left;
-  margin: auto;
+  margin-top: 5em ;
+  left: 2em;
+  /*border: 3px solid green;*/
 }
 
 .login_field {
@@ -546,4 +568,10 @@ hr {
   margin-left:auto;
   margin-right:auto;
   top: 10em;
+}
+
+.login_gen {
+  position: relative;
+  margin-bottom: 1.6em;
+  /*border: 3px solid green;*/
 }

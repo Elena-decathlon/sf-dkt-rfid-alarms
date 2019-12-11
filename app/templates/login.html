@@ -18,8 +18,14 @@
 
       <form class="submit entrance_exit" method="POST" action="/login">
           {{ form.hidden_tag() }}
-          <span class="login_label">{{ form.email.label }}</span><span class="login_field">{{ form.email(size=20) }}</span>
-          <span class="login_label">{{ form.password.label }}</span><span class="login_field">{{ form.password(size=20) }}</span>
+          <div class="login_gen">
+            <span class="login_label">{{ form.email.label }}</span>
+            <span class="login_field">{{ form.email(size=20) }}</span>
+          </div>
+          <div class="login_gen">
+            <span class="login_label">{{ form.password.label }}</span>
+            <span class="login_field">{{ form.password(size=20) }}</span>
+          </div>
           <input class="button" type="submit" value="Login">
       </form>
       <form class="login" method="GET" action="/login">

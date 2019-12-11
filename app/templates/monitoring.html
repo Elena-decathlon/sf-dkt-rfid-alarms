@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head lang='en'>
-    <title>My Simple web app</title>
+    <title>Monitoring</title>
     <!---<meta charset="utf-8" http-equiv="refresh" content="5">-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
@@ -17,7 +17,8 @@
           </div>
       </div>
       <h1 class="title_monitoring">Monitoring</h1>
-      <p class="title_monitoring_2">Please, check the products below</p>
+      <p class="title_monitoring_2"><b>{{ gates_info }}</b></p>
+      <p class="title_monitoring_3">Please, check the products below</p>
       <!--<script scr="script.js"></script>-->
       <!---<div id="root">-->
       <!--<div>-->
@@ -33,8 +34,8 @@
             <li class="additional_info">
                 <!--<p>Additional info</p>-->
                 <p>EPC<span class="border">{{ item.epc }}</span></p>
-                <p>EAN13<span class="border">{{item.ean13}}</span></p>
-                <p>Serial Number<span class="border">{{item.serial}}</span></p>
+                <p>EAN13<span class="border">{{ item.ean13 }}</span></p>
+                <p>Serial Number<span class="border">{{ item.serial }}</span></p>
             </li>
             <li class="alert">
                 <b>Alert created at: {{ item.time }}</b>
