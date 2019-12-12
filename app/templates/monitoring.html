@@ -26,7 +26,13 @@
         <ul>
           {% for item in pics %}
             <li class="product_name">
-                <b>{{ item.brand }}</b> {{ item.name }} <b>{{ item.size }}</b>
+                <b>{{ item.brand }}</b>
+              </li>
+              <li class="product_name">
+                {{ item.name }}
+              </li>
+              <li class="product_name">
+               <b>{{ item.size }}</b>
             </li>
             <li>
                 <img class="product_picture"; src="{{ item.pic }}"; alt="product picture"/>

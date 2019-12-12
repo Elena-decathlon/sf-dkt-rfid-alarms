@@ -144,7 +144,7 @@ html, body {
   border-radius: 5px;
 }
 
-.login {
+/*.login {
   position: absolute;
   left:0;
   right:0;
@@ -156,7 +156,7 @@ html, body {
 
   border-radius: 5px;
 
-}
+}*/
 
  {
   position: relative;
@@ -190,14 +190,15 @@ html, body {
 
 .monitoring {
   position: relative;
-  width: 20em;
-  height: 37em;
+  width: 22em;
+  height: 36em;
   top: 0px;
   left: 50%;
   transform: translateX(-50%);
 
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  /*border: 3px solid green;*/
 }
 
 .title_monitoring {
@@ -264,9 +265,9 @@ html, body {
   position: absolute;
   overflow-y: scroll;
   overflow-x: hidden;
-  width: 18em;
+  width: 20.8em;
   height: 26em;
-  left: 1em;
+  left: 0.6em;
 
   top: 7.5em;
 
@@ -276,19 +277,17 @@ html, body {
   border-bottom: 2px solid #CFCFCF;
   margin-top: 0.5em;
   /*border: 3px solid green;*/
-  /*text-align: center;*/
-  /*background-color: #FFFFFF;*/
-  /*border: 3px solid green;*/
 }
 
 .product_name {
   display: block;
+  font-weight: bold;
+  text-align: center;
   font-size: 11px;
   color: #07649A;
-  margin-top: 20px;
+  margin-top: 0.1em;
+  /*border: 3px solid green;*/
 }
-
-
 
 .border {
   display: inline;
@@ -301,10 +300,9 @@ html, body {
 
 .back_to_gates {
   position: absolute;
-  width: 124px;
-  height: 40px;
-  left: -1.2em;
-  top: -0.3em;
+  width: 3em;
+  left: 0.6em;
+  top: -0.5em;
 
   font-family: PT Sans;
   font-style: normal;
@@ -314,6 +312,7 @@ html, body {
   text-align: center;
 
   color: #717171;
+  /*border: 3px solid green;*/
 }
 
 .submit .backtext {
@@ -337,13 +336,13 @@ html, body {
 
 .refresh {
   position: absolute;
-  width: 171px;
-  height: 40px;
+  width: 100px;
+  height: 30px;
   left:0;
   right:0;
   margin-left:auto;
   margin-right:auto;
-  top: 30.4em;
+  top: 29.9em;
 
   font-family: PT Sans;
   font-style: normal;
@@ -353,13 +352,14 @@ html, body {
   text-align: center;
 
   color: #717171;
+  /*border: 3px solid green;*/
 }
 
 .logout {
   position: absolute;
-  width: 12em;
-  right: -3em;
-  top: -0.2em;
+  width: 3em;
+  right: 0.6em;
+  top: -0.5em;
 
   font-family: PT Sans;
   font-style: normal;
@@ -369,6 +369,7 @@ html, body {
   text-align: center;
 
   color: #717171;
+  /*border: 3px solid green;*/
 }
 
 .submit .logout {
@@ -411,7 +412,7 @@ body {
   background-color: #FFFFFF;
   background-image: url(../images/background.jpg);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   color: #414141;
   text-align: center;
   padding: 40px;
@@ -438,12 +439,12 @@ li {
   font-family: PT Sans;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
   line-height: 18px;
-  text-align: left;
-  /*margin: 10px auto;*/
-  margin-top: 1em;
-  margin-left: -2.4em;
+  text-align: center;
+  margin-top: 0.2em;
+  height: 2.02em;
+
+  margin-left: -1.0em;
   /*border: 3px solid green;*/
 }
 
@@ -456,26 +457,37 @@ p {
 
 .login_label {
   font-size: 14px;
-  text-align: left;
-  margin-top: 5em ;
-  left: 2em;
+  /*text-align: left;*/
+  float: left;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  /*left: 2em;*/
   /*border: 3px solid green;*/
 }
 
 .login_field {
   font-size: 14px;
-  text-align: left;
-  margin: auto;
+  /*text-align: left;*/
+  float: right;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  /*margin: auto;*/
+  /*border: 3px solid green;*/
 }
 
 hr {
-  margin-left: -2.5em;
+  margin-bottom: 0.6em;
+  margin-left: -2.4em;
+  width: 20.7em;
+  /*border: 3px solid green;*/
 }
 
 .product_picture {
   display: inline-block;
   border: 1px solid #CFCFCF; /*grey*/
   width: 5em;
+  margin-left: 1em;
+
   /*height: 10em;*/
   /*margin: 20px auto;*/
   /*border: 3px solid green*/
@@ -485,14 +497,16 @@ hr {
   /*height: 10em;*/
   width: 12em;
   display: inline-block;
-  margin-left: 0em;
+  margin-left: 1em;
   /*border: 3px solid green;*/
 }
 
 .alert {
   display: block;
+  text-align: center;
   /*margin: auto;*/
   font-size: 11px;
+  /*border: 3px solid green;*/
 }
 
 .logo {
@@ -502,6 +516,7 @@ hr {
 
 .submit {
   margin: 10px auto;
+  /*border: 3px solid green;*/
 }
 
 .button {
@@ -573,5 +588,20 @@ hr {
 .login_gen {
   position: relative;
   margin-bottom: 1.6em;
+  /*border: 3px solid green;*/
+}
+
+.butt {
+  position: relative;
+  font-family: PT sans;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  vertical-align: middle;
+  color: #FFF;
+  background-color: #1482C2;    /* Blue #5995DA*/
+  width: 12em;
+  height: 100%;
+  margin-top: 2em;
   /*border: 3px solid green;*/
 }

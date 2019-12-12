@@ -32,7 +32,7 @@ def before_request():
 
 @flask_app.after_request
 def after_request(response):
-    response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate,post-check=0, pre-check=0'"
+    response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate, post-check=0, pre-check=0'"
     response.headers["Pragma"] = "no-cache"
     response.headers["Expires"] = "0"
     response.headers['Cache-Control'] = 'public, max-age=0'
@@ -57,6 +57,7 @@ def login():
             user = User.query.filter_by(email=form.email.data).first()
             password = request.form['password']
             email = request.form['email']
+            print("I AM HERE")
             if user:
                 if user and check_password_hash(user.password, password):
                     session['email'] = email #saving the login for the session
@@ -115,11 +116,11 @@ def gates_selection():
 @flask_app.route("/monitoring-exit")
 @login_required
 def monitoring():
-    if session['email'] == 'lena':
+    if session['email'] == 'security_potrero' or session['email'] == 'lena':
         pics = app.theft_exit_p.get_pic()
         gates_info = "Entrance/Exit"
         return(render_template("monitoring.html", pics=pics, gates_info=gates_info))
-    elif session['email'] == 'test':
+    elif session['email'] == 'security_emeryville' or session['email'] == 'lena':
         pics = app.theft_exit_em.get_pic()
         gates_info = "Entrance/Exit"
         return(render_template("monitoring.html", pics=pics, gates_info=gates_info))
@@ -127,11 +128,11 @@ def monitoring():
 @flask_app.route("/monitoring-restroom")
 @login_required
 def monitoring_2():
-    if session['email'] == 'lena':
+    if session['email'] == 'security_potrero' or session['email'] == 'lena':
         gates_info = "Restroom"
         pics = app.theft_rest_p.get_pic()
         return(render_template("monitoring.html", pics=pics, gates_info=gates_info))
-    elif session['email'] == 'test':
+    elif session['email'] == 'security_emeryville' or session['email'] == 'lena':
         gates_info = "Restroom"
         pics = app.theft_rest_em.get_pic()
         return(render_template("monitoring.html", pics=pics, gates_info=gates_info))

@@ -14,21 +14,18 @@
             <img src="../static/images/logo.png" alt="logo">
           </div>
         </div>
-      <h1 class="title">Login</h1>
+      <h1 class="title">Welcome</h1>
+      <p class="title_2">Please, sign in below</p>
 
-      <form class="submit entrance_exit" method="POST" action="/login">
+      <form class="entrance_exit" method="POST" action="/login">
           {{ form.hidden_tag() }}
-          <div class="login_gen">
-            <span class="login_label">{{ form.email.label }}</span>
-            <span class="login_field">{{ form.email(size=20) }}</span>
-          </div>
-          <div class="login_gen">
-            <span class="login_label">{{ form.password.label }}</span>
-            <span class="login_field">{{ form.password(size=20) }}</span>
-          </div>
-          <input class="button" type="submit" value="Login">
+            <span class="login_label"><b>Username</b></span>
+            <span class="login_field">{{ form.email(size=18) }}</span>
+            <span class="login_label"><b>Password</b></span>
+            <span class="login_field">{{ form.password(size=18) }}</span>
+          <input class="butt" type="submit" value="Sign in">
       </form>
-      <form class="login" method="GET" action="/login">
+      <form class="login" method="POST" action="/login">
           <!--<a class="button" type="submit" href="">Login</a>-->
       </form>
     </div>
