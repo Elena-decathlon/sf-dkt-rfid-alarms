@@ -410,7 +410,7 @@ html, body {
 
 body {
   background-color: #FFFFFF;
-  background-image: url(../images/background.jpg);
+  /*background-image: url(../images/background.jpg);*/
   background-repeat: no-repeat;
   background-size: cover;
   color: #414141;
@@ -605,3 +605,5 @@ hr {
   margin-top: 2em;
   /*border: 3px solid green;*/
 }
+@import "@material/button/mdc-button";
+@import "@material/button/mdc-button__ripple";
