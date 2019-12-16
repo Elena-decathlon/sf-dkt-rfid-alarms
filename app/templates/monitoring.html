@@ -1,87 +1,124 @@
-<!DOCTYPE html>
-<html>
-  <head lang='en'>
-    <title>Monitoring</title>
-    <!---<meta charset="utf-8" http-equiv="refresh" content="5">-->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-    <!---<link rel="stylesheet" href="../static/css/styles.css"/>--->
-    <!--Import Google Icon Font-->
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-     <!--Import materialize.css-->
-     <link type="text/css" rel="stylesheet" href="../static/css/materialize.min.css"  media="screen,projection"/>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitoring</title>
+  <style>
+  #bottomDiv{
+    position: absolute;
+    bottom: 34em;
+    left: 0;
+  }
+  </style>
+</head>
+<body>
+  <!--- NAVIGATION BAR FULL PAGE MENU VERSION --->
+  <div class="navbar-fixed">
+    <nav class="nav-wrapper blue darken-3">
+      <div class="container">
+        <ul id="nav-mobile" class="">
+          <li class="left">
+            <a href="#" class="sidenav-trigger" data-target="mobile-links">
+            <i class="material-icons">menu</i>
+            </a>
+          </li>
+          <li class="right">
+            <form class="valign-wrapper" action="/monitoring" method="POST">
+              <a href="">
+                <i class="material-icons">refresh</i>
+              </a>
+            </form>
+          </li>
+        <!---   <li>
+           <form class="valign-wrapper" method="POST">
+              <a href="/logout">
+                <i class="material-icons">logout</i>
+              </a>
+            </form>
+          </li>--->
+          <li><a href="" class="center-align hide-on-med-and-down">Exit/Entrance</a></li>
+          <li><a href="" class="center-align hide-on-med-and-down">Restroom</a></li>
 
-     <!--Let browser know website is optimized for mobile-->
-     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  </head>
-  <body>
-
-    <!--<body background="../static/images/decathlon_layout.jpg">-->
-    <nav>
-     <div class="nav-wrapper blue darken-1">
-
-      <a href="#" class="brand-logo">refresh</a>
-       <!---<img src="../static/images/logo.png" alt="logo">--->
-       <ul id="nav-mobile" class="right hide-on-med-and-down">
-         <li><a href="sass.html">Sass</a></li>
-         <li><a href="badges.html">Components</a></li>
-         <li><a href="collapsible.html">JavaScript</a></li>
-       </ul>
-     </div>
-   </nav>
-    <!---<div class="monitoring">
-      <div class="logo_color_monitoring">
-        <img src="../static/images/logo_color.png" alt="logo">
-          <div class="logo_monitoring">
-            <img src="../static/images/logo.png" alt="logo">
-          </div>
-      </div>--->
-      <h1 class="title_monitoring">Monitoring</h1>
-      <h5 class="title_monitoring_2"><b>{{ gates_info }}</b></h5>
-      <h5 class="title_monitoring_3">Please, check the products below</h5>
-      <!--<script scr="script.js"></script>-->
-      <!---<div id="root">-->
-      <!--<div>-->
-	    <div class="display" style="/*overflow:scroll; */margin-left: 0px;">
-        <ul>
-          {% for item in pics %}
-            <li class="product_name">
-                <b>{{ item.brand }}</b>
-              </li>
-              <li class="product_name">
-                {{ item.name }}
-              </li>
-              <li class="product_name">
-               <b>{{ item.size }}</b>
-            </li>
-            <li>
-                <img class="product_picture"; src="{{ item.pic }}"; alt="product picture"; style="width:200px;height:200px;"/>
-            </li>
-            <li class="additional_info">
-                <!--<p>Additional info</p>-->
-                <p><b>EPC </b><span class="border">{{ item.epc }}</span></p>
-                <p><b>EAN13 </b><span class="border">{{ item.ean13 }}</span></p>
-                <p><b>Serial Number </b><span class="border">{{ item.serial }}</span></p>
-            </li>
-            <li class="alert">
-                <b>Alert created at: {{ item.time }}</b>
-            </li>
-            <!--<li>
-                <a class="button deactivate" href="">Deactivate</a><a class="button cancel" href="">Cancel</a>
-            </li>-->
-            <li><hr></li>
-            {% endfor %}
         </ul>
-	    </div>
-      <form class="submit refresh" action="/monitoring" method="POST">
-        <a type="submit" href=""><img src="../static/images/refresh.png"></a>
-      </form>
+      </div>
+    </nav>
+  </div>
+
+  <!-- FULL PAGE MENU VERSION COLLAPSABLE WHEN MOBILE--->
+
+  <ul class="sidenav collapsible" id="mobile-links">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">security</i>Select Gates</div>
+
+        <div class="center-align">
+          <form action="/monitoring-exit" method="GET">
+            <a class="black-text" href="/monitoring-exit">Entrance/Exit</a>
+          </form>
+        </div>
+
+        <div class="center-align">
+          <form action="/monitoring-exit" method="GET">
+            <a class="black-text" href="/monitoring-restroom">Restroom</a>
+          </form>
+        </div>
+      </li>
+
+      <li>
+        <div class="collapsible-header" id="bottomDiv">
+          <form class="valign-wrapper" method="POST">
+            <i class="material-icons">logout</i>
+              <a href="/logout" class="black-text">Sign out</a>
+          </form>
+        </div>
+      </li>
+  </ul>
+
+  <!--- MAIN PAGE INFO --->
+
+  <h4 class="center-align">Monitoring: {{ gates_info }}</h3>
+  <h5 class="center-align">Please, check the products below</h5>
+
+
+  {% for item in pics %}
+    <div class="card">
+
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">{{ item.name }}<i class="material-icons right">more_vert</i></span>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">{{ item.brand }}<i class="material-icons right">close</i></span>
+        <p><b>{{ item.name }}</b></p>
+        <p><b>Size </b>{{ item.size }}</p>
+        <p><b>EPC </b><span class="border">{{ item.epc }}</span></p>
+        <p><b>EAN13 </b><span class="border">{{ item.ean13 }}</span></p>
+        <p><b>Serial Number </b><span class="border">{{ item.serial }}</span></p>
+        <p><b>Alert created at {{ item.time }}</b></p>
+      </div>
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="{{ item.pic }}" alt="product picture"/>
+      </div>
     </div>
-    <form class="submit back_to_gates" method="GET">
-      <a type="submit" href="/gates-selection"><img src="../static/images/back_2.png"><span class="backtext">Back to a previous page</span></a>
-    </form>
-    <form class="submit logout" method="POST">
-      <a type="submit" href="/logout"><img src="../static/images/logout.png"><span class="logout">Logout</span></a>
-    </form>
-  </body>
+  {% endfor %}
+
+  <!--- Compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <!--- JS SCRIPTS --->
+  <script>
+    $(document).ready(function(){
+      $('.sidenav').sidenav();
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('.collapsible').collapsible();
+    });
+  </script>
+</body>
 </html>
