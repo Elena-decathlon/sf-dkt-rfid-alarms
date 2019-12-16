@@ -42,7 +42,9 @@ def get_pic():
             pic = "../static/images/not_found.png"
         else:
             name = i["product_name"]
-            pic = i["product_picture"]
+            pic_check = str(i["product_picture"])
+            if pic_check[0:4] == "http":
+                pic = "https" + pic_check[4:]                               #hardcoded to change http to https manually, needs to be fixed
             brand = i["product_brand"]
             size = i["product_size"]
         t_str = i["created"]
