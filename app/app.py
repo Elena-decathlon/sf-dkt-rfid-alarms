@@ -1,15 +1,17 @@
 from flask import Flask, flash, make_response, request, render_template, redirect, session, url_for
+
 from datetime import timedelta
 from app.forms import LoginForm
 from werkzeug.security import check_password_hash
 import logging
-
+from flask_material import Material
 #logging.basicConfig(filename='logs/log_in.log',level=logging.DEBUG)
 #logging.debug('This message should go to the log file')
 #logging.info('So should this')
 #logging.warning('And this, too')
 
 flask_app = Flask(__name__)
+Material(flask_app)
 flask_app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
 flask_app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 flask_app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///user.db'
@@ -44,7 +46,8 @@ def unauthorized():
 
 @flask_app.route('/')
 def index():
-    return(render_template("index.html"))
+#    return(render_template("index.html"))
+    return(redirect(url_for("login")))
 
 @flask_app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -67,16 +70,17 @@ def login():
 #                    flash("You're now logged in!")
                     print("Login success")
 #                    logging.info('%s logged in successfully', user.email)
-                    return(redirect(url_for('gates_selection')))
+                    return(redirect(url_for('monitoring')))
                 else:
 #                   return "Wrong password"
 #                    flash("No user with that email/password combo")
                     print("login failed")
                     return(render_template('login.html', form=form))
             else:
-                return "user doesn't exist"
+                flash("user doesn't exist")
+                return(redirect(url_for('login')))
     else:
-        return "form not validated"
+        return(redirect(url_for('login')))
 
 #@flask_app.route('/protected')
 #@login_required
