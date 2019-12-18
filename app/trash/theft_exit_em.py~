@@ -6,7 +6,7 @@ import time
 
 import  app.decoder
 
-url = "https://sf-dkt-gates-store-api-2214.herokuapp.com/alerts/theft"
+url = "https://sf-dkt-gates-store-api-s.herokuapp.com/alerts/theft"
 
 payload = "{\n    \"api_key\": \"u7dcdj52df45y7a0avcba8idu56g17d4\",\n    \"id_gate\": 1\n}"
 
@@ -14,10 +14,10 @@ headers = {
     'Content-Type': "application/json",
     'Accept': "*/*",
     'Cache-Control': "no-cache",
-    'Host': "sf-dkt-gates-store-api-2214.herokuapp.com",
+    'Host': "sf-dkt-gates-store-api-s.herokuapp.com",
     'Accept-Encoding': "gzip, deflate",
     'Content-Length': "72",
-    'Referer': "https://sf-dkt-gates-store-api-2214.herokuapp.com/alerts/theft",
+    'Referer': "https://sf-dkt-gates-store-api-s.herokuapp.com/alerts/theft",
     'Connection': "keep-alive",
     'cache-control': "no-cache"
     }
@@ -42,7 +42,9 @@ def get_pic():
             pic = "../static/images/not_found.png"
         else:
             name = i["product_name"]
-            pic = i["product_picture"]
+            pic_check = str(i["product_picture"])
+            if pic_check[0:3] == "http":
+                pic = "https" + pic_check[4:]
             brand = i["product_brand"]
             size = i["product_size"]
         t_str = i["created"]

@@ -8,6 +8,8 @@
 # __ Licence: MIT
 import sys
 
+'''Decoding EPC to EAN13 and serail number'''
+
 def hex_to_bin(hex):
     bin = "".join(reversed( [i+j for i,j in zip( *[ ["{0:04b}".format(int(c,16)) for c in reversed("0"+hex)][n::2] for n in [1,0] ] ) ] ))
     return bin

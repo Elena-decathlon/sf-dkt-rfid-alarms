@@ -1,0 +1,222 @@
+DEBUG:root:This message should go to the log file
+INFO:root:So should this
+WARNING:root:And this, too
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): sf-dkt-gates-store-api-2214.herokuapp.com:443
+DEBUG:urllib3.connectionpool:https://sf-dkt-gates-store-api-2214.herokuapp.com:443 "GET /alerts/theft HTTP/1.1" 308 327
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): sf-dkt-gates-store-api-s.herokuapp.com:443
+DEBUG:urllib3.connectionpool:https://sf-dkt-gates-store-api-s.herokuapp.com:443 "GET /alerts/theft/ HTTP/1.1" 200 26081
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): sf-dkt-gates-store-api-2214.herokuapp.com:443
+DEBUG:urllib3.connectionpool:https://sf-dkt-gates-store-api-2214.herokuapp.com:443 "GET /alerts/theft HTTP/1.1" 308 327
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): sf-dkt-gates-store-api-s.herokuapp.com:443
+DEBUG:urllib3.connectionpool:https://sf-dkt-gates-store-api-s.herokuapp.com:443 "GET /alerts/theft/ HTTP/1.1" 200 26050
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+DEBUG:root:This message should go to the log file
+INFO:root:So should this
+WARNING:root:And this, too
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): sf-dkt-gates-store-api-2214.herokuapp.com:443
+DEBUG:urllib3.connectionpool:https://sf-dkt-gates-store-api-2214.herokuapp.com:443 "GET /alerts/theft HTTP/1.1" 308 327
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): sf-dkt-gates-store-api-s.herokuapp.com:443
+DEBUG:urllib3.connectionpool:https://sf-dkt-gates-store-api-s.herokuapp.com:443 "GET /alerts/theft/ HTTP/1.1" 200 26081
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): sf-dkt-gates-store-api-2214.herokuapp.com:443
+DEBUG:urllib3.connectionpool:https://sf-dkt-gates-store-api-2214.herokuapp.com:443 "GET /alerts/theft HTTP/1.1" 308 327
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): sf-dkt-gates-store-api-s.herokuapp.com:443
+DEBUG:urllib3.connectionpool:https://sf-dkt-gates-store-api-s.herokuapp.com:443 "GET /alerts/theft/ HTTP/1.1" 200 26050
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-604-493
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:36] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:36] "GET /static/css/styles.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:36] "GET /static/images/logo.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:36] "GET /static/images/logo_color.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:37] "GET /static/images/back_2.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:37] "GET /static/images/logout.png HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): sf-dkt-gates-store-api-2214.herokuapp.com:443
+DEBUG:urllib3.connectionpool:https://sf-dkt-gates-store-api-2214.herokuapp.com:443 "GET /alerts/theft HTTP/1.1" 308 327
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): sf-dkt-gates-store-api-s.herokuapp.com:443
+DEBUG:urllib3.connectionpool:https://sf-dkt-gates-store-api-s.herokuapp.com:443 "GET /alerts/theft/ HTTP/1.1" 200 26081
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:39] "GET /monitoring-exit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:39] "GET /static/css/styles.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:39] "GET /static/images/logo.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:39] "GET /static/images/logo_color.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:39] "GET /static/images/not_found.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:39] "GET /static/images/back_2.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:39] "GET /static/images/logout.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:39] "GET /static/images/refresh.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:41] "GET /logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:41] "GET /static/images/logo.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:41] "GET /static/css/styles.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:41] "GET /static/images/logo_color.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:42] "GET /monitoring-exit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:48] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:48] "GET /static/css/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:48] "GET /static/images/logo_color.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:48] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:48] "GET /static/images/back_2.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:48] "GET /static/images/logout.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:48] "GET /static/images/background.jpg HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): sf-dkt-gates-store-api-2214.herokuapp.com:443
+DEBUG:urllib3.connectionpool:https://sf-dkt-gates-store-api-2214.herokuapp.com:443 "GET /alerts/theft HTTP/1.1" 308 327
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): sf-dkt-gates-store-api-s.herokuapp.com:443
+DEBUG:urllib3.connectionpool:https://sf-dkt-gates-store-api-s.herokuapp.com:443 "GET /alerts/theft/ HTTP/1.1" 200 26081
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:58] "GET /monitoring-exit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:58] "GET /static/css/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:58] "GET /static/images/logo.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:58] "GET /static/images/logo_color.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:59] "GET /static/images/not_found.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:59] "GET /static/images/refresh.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:59] "GET /static/images/back_2.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:59] "GET /static/images/background.jpg HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:35:59] "GET /static/images/logout.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:01] "GET /logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:01] "GET /static/css/styles.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:01] "GET /static/images/logo_color.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:01] "GET /static/images/logo.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:03] "GET /monitoring-exit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:07] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:07] "GET /static/css/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:07] "GET /static/images/logo_color.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:07] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:08] "GET /static/images/back_2.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:08] "GET /static/images/logout.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:08] "GET /static/images/background.jpg HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): sf-dkt-gates-store-api-2214.herokuapp.com:443
+DEBUG:urllib3.connectionpool:https://sf-dkt-gates-store-api-2214.herokuapp.com:443 "GET /alerts/theft HTTP/1.1" 308 327
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): sf-dkt-gates-store-api-s.herokuapp.com:443
+DEBUG:urllib3.connectionpool:https://sf-dkt-gates-store-api-s.herokuapp.com:443 "GET /alerts/theft/ HTTP/1.1" 200 26081
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:12] "GET /monitoring-exit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:12] "GET /static/css/styles.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:12] "GET /static/images/logo_color.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:12] "GET /static/images/logo.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:12] "GET /static/images/not_found.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:12] "GET /static/images/refresh.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:12] "GET /static/images/back_2.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:12] "GET /static/images/logout.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:14] "GET /gates-selection HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:14] "GET /static/css/styles.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:14] "GET /static/images/logo_color.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:14] "GET /static/images/logo.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:14] "GET /static/images/back_2.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:14] "GET /static/images/logout.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:16] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:16] "GET /static/images/logo_color.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:16] "GET /static/images/logo.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:17] "GET /static/css/styles.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:22] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:22] "GET /static/css/styles.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:22] "GET /static/images/logo.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:22] "GET /static/images/logo_color.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:23] "GET /static/images/back_2.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:23] "GET /static/images/logout.png HTTP/1.1" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): sf-dkt-gates-store-api-2214.herokuapp.com:443
+DEBUG:urllib3.connectionpool:https://sf-dkt-gates-store-api-2214.herokuapp.com:443 "GET /alerts/theft HTTP/1.1" 308 327
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): sf-dkt-gates-store-api-s.herokuapp.com:443
+DEBUG:urllib3.connectionpool:https://sf-dkt-gates-store-api-s.herokuapp.com:443 "GET /alerts/theft/ HTTP/1.1" 200 26050
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:24] "GET /monitoring-restroom HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:24] "GET /static/css/styles.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:24] "GET /static/images/logo_color.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:24] "GET /static/images/logo.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:25] "GET /static/images/not_found.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:25] "GET /None HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:25] "GET /static/images/refresh.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:25] "GET /static/images/back_2.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:25] "GET /static/images/logout.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:25] "GET /logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:25] "GET /static/css/styles.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:25] "GET /static/images/logo_color.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:25] "GET /static/images/logo.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:27] "GET /monitoring-restroom HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:43] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:43] "GET /static/images/logo_color.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:43] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:43] "GET /static/css/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:44] "GET /static/images/back_2.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:44] "GET /static/images/logout.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:44] "GET /static/images/background.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:52] "GET /logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:52] "GET /static/css/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:52] "GET /static/images/logo_color.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:52] "GET /static/images/logo.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:52] "GET /static/images/background.jpg HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:58] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:58] "GET /static/css/styles.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:58] "GET /static/images/logo_color.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:36:58] "GET /static/images/logo.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:02] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:02] "GET /static/css/styles.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:02] "GET /static/images/logo_color.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:02] "GET /static/images/logo.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:02] "GET /static/images/back_2.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:02] "GET /static/images/logout.png HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): sf-dkt-gates-store-api-2214.herokuapp.com:443
+DEBUG:urllib3.connectionpool:https://sf-dkt-gates-store-api-2214.herokuapp.com:443 "GET /alerts/theft HTTP/1.1" 308 327
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): sf-dkt-gates-store-api-s.herokuapp.com:443
+DEBUG:urllib3.connectionpool:https://sf-dkt-gates-store-api-s.herokuapp.com:443 "GET /alerts/theft/ HTTP/1.1" 200 26050
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:04] "GET /monitoring-restroom HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:04] "GET /static/css/styles.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:04] "GET /static/images/logo_color.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:04] "GET /static/images/logo.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:04] "GET /None HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:04] "GET /static/images/back_2.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:04] "GET /static/images/logout.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:04] "GET /static/images/refresh.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:04] "GET /static/images/not_found.png HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): sf-dkt-gates-store-api-2214.herokuapp.com:443
+DEBUG:urllib3.connectionpool:https://sf-dkt-gates-store-api-2214.herokuapp.com:443 "GET /alerts/theft HTTP/1.1" 308 327
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): sf-dkt-gates-store-api-s.herokuapp.com:443
+DEBUG:urllib3.connectionpool:https://sf-dkt-gates-store-api-s.herokuapp.com:443 "GET /alerts/theft/ HTTP/1.1" 200 26050
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:07] "GET /monitoring-restroom HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:07] "GET /static/css/styles.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:07] "GET /static/images/logo.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:07] "GET /static/images/logo_color.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:07] "GET /None HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:07] "GET /static/images/not_found.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:07] "GET /static/images/refresh.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:07] "GET /static/images/back_2.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:07] "GET /static/images/logout.png HTTP/1.1" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): sf-dkt-gates-store-api-2214.herokuapp.com:443
+DEBUG:urllib3.connectionpool:https://sf-dkt-gates-store-api-2214.herokuapp.com:443 "GET /alerts/theft HTTP/1.1" 308 327
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): sf-dkt-gates-store-api-s.herokuapp.com:443
+DEBUG:urllib3.connectionpool:https://sf-dkt-gates-store-api-s.herokuapp.com:443 "GET /alerts/theft/ HTTP/1.1" 200 26050
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:12] "GET /monitoring-restroom HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:12] "GET /static/css/styles.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:12] "GET /static/images/logo_color.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:12] "GET /static/images/logo.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:12] "GET /static/images/not_found.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:12] "GET /None HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:12] "GET /static/images/back_2.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:12] "GET /static/images/logout.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:12] "GET /static/images/refresh.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:22] "GET /gates-selection HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:22] "GET /static/css/styles.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:22] "GET /static/images/logo_color.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:22] "GET /static/images/logo.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:22] "GET /static/images/back_2.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:22] "GET /static/images/logout.png HTTP/1.1" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): sf-dkt-gates-store-api-2214.herokuapp.com:443
+DEBUG:urllib3.connectionpool:https://sf-dkt-gates-store-api-2214.herokuapp.com:443 "GET /alerts/theft HTTP/1.1" 308 327
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): sf-dkt-gates-store-api-s.herokuapp.com:443
+DEBUG:urllib3.connectionpool:https://sf-dkt-gates-store-api-s.herokuapp.com:443 "GET /alerts/theft/ HTTP/1.1" 200 26081
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:24] "GET /monitoring-exit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:24] "GET /static/css/styles.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:24] "GET /static/images/logo_color.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:24] "GET /static/images/logo.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:24] "GET /static/images/not_found.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:24] "GET /static/images/refresh.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:24] "GET /static/images/back_2.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:24] "GET /static/images/logout.png HTTP/1.1" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): sf-dkt-gates-store-api-2214.herokuapp.com:443
+DEBUG:urllib3.connectionpool:https://sf-dkt-gates-store-api-2214.herokuapp.com:443 "GET /alerts/theft HTTP/1.1" 308 327
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): sf-dkt-gates-store-api-s.herokuapp.com:443
+DEBUG:urllib3.connectionpool:https://sf-dkt-gates-store-api-s.herokuapp.com:443 "GET /alerts/theft/ HTTP/1.1" 200 26081
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:27] "GET /monitoring-exit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:27] "GET /static/css/styles.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:27] "GET /static/images/logo.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:27] "GET /static/images/logo_color.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:27] "GET /static/images/not_found.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:27] "GET /static/images/refresh.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:27] "GET /static/images/logout.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:27] "GET /static/images/back_2.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:36] "GET /logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:37] "GET /static/css/styles.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:37] "GET /static/images/logo_color.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2019 18:37:37] "GET /static/images/logo.png HTTP/1.1" 304 -

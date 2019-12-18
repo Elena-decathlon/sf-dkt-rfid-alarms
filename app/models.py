@@ -3,6 +3,7 @@ from app.app import flask_app
 
 db = SQLAlchemy(flask_app)
 
+''' creating class User to login'''
 
 class User(db.Model):
     email = db.Column(db.String(80), primary_key=True, unique=True)

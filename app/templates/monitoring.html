@@ -1,19 +1,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!--Import Google Icon Font-->
+  <!--- Disable browser caching --->
+  <meta Http-Equiv="Cache-Control" Content="no-store"/>
+  <meta Http-Equiv="Pragma" Content="no-cache"/>
+  <meta Http-Equiv="Expires" Content="0"/>
+  <!--- Import Google Icon Font --->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Compiled and minified CSS -->
+  <!--- Compiled and minified CSS --->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-  <!--Let browser know website is optimized for mobile-->
+  <!--- Let browser know website is optimized for mobile --->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Monitoring</title>
   <style>
-  #bottomDiv{
+  #topExit{
     position: absolute;
-    bottom: 34em;
+    bottom: 12em;
     left: 0;
+    }
+    #topExitBtn{
+      position: absolute;
+      bottom: 8em;
+      left: 0;
+    }
+  #bottomVersion{
+    position: absolute;
+    bottom: 4em;
+    left: 0;
+    }
+  .text_size {
+    font-size: 14px !important;
+  }
+  .indent {
+    margin-left: 4em;
   }
   </style>
 </head>
@@ -28,6 +47,12 @@
             <i class="material-icons">menu</i>
             </a>
           </li>
+          <li class="right hide-on-med-and-down">
+            <form class="valign-wrapper" action="/logout" method="POST">
+              <a href="/logout">
+                <i class="material-icons">logout</i>
+              </a>
+          </li>
           <li class="right">
             <form class="valign-wrapper" action="/monitoring" method="POST">
               <a href="">
@@ -35,16 +60,16 @@
               </a>
             </form>
           </li>
-        <!---   <li>
-           <form class="valign-wrapper" method="POST">
-              <a href="/logout">
-                <i class="material-icons">logout</i>
-              </a>
+          <li>
+            <form action="/monitoring-exit" method="GET">
+              <a href="/monitoring-exit" class="center-align hide-on-med-and-down">Exit/Entrance</a>
             </form>
-          </li>--->
-          <li><a href="" class="center-align hide-on-med-and-down">Exit/Entrance</a></li>
-          <li><a href="" class="center-align hide-on-med-and-down">Restroom</a></li>
-
+          </li>
+          <li>
+            <form action="/monitoring-restroom" method="GET">
+              <a href="/monitoring-restroom" class="center-align hide-on-med-and-down">Restroom</a>
+            </form>
+          </li>
         </ul>
       </div>
     </nav>
@@ -54,28 +79,35 @@
 
   <ul class="sidenav collapsible" id="mobile-links">
     <li>
-      <div class="collapsible-header"><i class="material-icons">security</i>Select Gates</div>
+      <div class="collapsible-header"><b>Gates Selection</b></div>
 
-        <div class="center-align">
+        <div class="indent">
           <form action="/monitoring-exit" method="GET">
-            <a class="black-text" href="/monitoring-exit">Entrance/Exit</a>
+            <i class="material-icons">directions_run</i>
+            <a class="black-text waves-effect waves-light btn grey lighten-5" href="/monitoring-exit">Entrance</a>
           </form>
         </div>
 
-        <div class="center-align">
-          <form action="/monitoring-exit" method="GET">
-            <a class="black-text" href="/monitoring-restroom">Restroom</a>
+        <div class="indent">
+          <form action="/monitoring-restroom" method="GET">
+            <i class="material-icons">wc</i>
+            <a class="black-text waves-effect waves-light btn grey lighten-5" href="/monitoring-restroom">Restroom</a>
           </form>
         </div>
       </li>
 
       <li>
-        <div class="collapsible-header" id="bottomDiv">
+        <div class="collapsible-header" id="topExit"><b>Sign out</b></div>
+        <div class="indent" id="topExitBtn">
           <form class="valign-wrapper" method="POST">
             <i class="material-icons">logout</i>
-              <a href="/logout" class="black-text">Sign out</a>
+            <a href="/logout" class="black-text waves-effect waves-light btn grey lighten-5">Sign out</a>
           </form>
         </div>
+      </li>
+      <li>
+        <div class="collapsible-header" id="bottomVersion">
+          <span>© 2019 RFID alarms v.1<span>
       </li>
   </ul>
 
@@ -84,15 +116,19 @@
   <h4 class="center-align">Monitoring: {{ gates_info }}</h3>
   <h5 class="center-align">Please, check the products below</h5>
 
-
   {% for item in pics %}
     <div class="card">
 
       <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4">{{ item.name }}<i class="material-icons right">more_vert</i></span>
+        <div class="card-title activator grey-text text-darken-4 small text_size">
+          <p><b>{{ item.brand }}</b></p>
+          <p><b>{{ item.name }}</b></p>
+          <p><b>{{ item.time }}</b><i class="blue-text text-darken-2 right">more info</i></p>
+        </div>
       </div>
       <div class="card-reveal">
         <span class="card-title grey-text text-darken-4">{{ item.brand }}<i class="material-icons right">close</i></span>
+        <p>{{ item.brand }}</p>
         <p><b>{{ item.name }}</b></p>
         <p><b>Size </b>{{ item.size }}</p>
         <p><b>EPC </b><span class="border">{{ item.epc }}</span></p>
@@ -106,18 +142,16 @@
     </div>
   {% endfor %}
 
+  <!--- JS SCRIPTS --->
+
   <!--- Compiled and minified JavaScript -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-  <!--- JS SCRIPTS --->
+
+  <!--- initialising side navigation menu--->
   <script>
     $(document).ready(function(){
       $('.sidenav').sidenav();
-    });
-  </script>
-  <script>
-    $(document).ready(function(){
-      $('.collapsible').collapsible();
     });
   </script>
 </body>

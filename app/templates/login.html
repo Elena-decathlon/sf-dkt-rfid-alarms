@@ -2,7 +2,10 @@
 <html>
 <head lang='en'>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <!--- Disable browser caching --->
+    <meta Http-Equiv="Cache-Control" Content="no-store"/>
+    <meta Http-Equiv="Pragma" Content="no-cache"/>
+    <meta Http-Equiv="Expires" Content="0"/>
     <!--Import Google Icon Font-->
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
      <!-- Compiled and minified CSS -->
@@ -16,27 +19,50 @@
      }
      /* label focus color */
      .input-field input:focus + label {
-       color: blue !important;
+       color: black !important;
      }
      /* label underline focus color */
      .row .input-field input:focus {
-       border-bottom: 1px solid blue !important;
-       box-shadow: 0 1px 0 0 blue !important
+       border-bottom: 1px solid black !important;
+       box-shadow: 0 1px 0 0 black !important
+     }
+     .logo {
+       position: relative;
+       width: 110px;
+       left: -9em;
+       top: -2.2em;
+       height: 120px;
+       width: 120px;
+     }
+     body {
+       display: flex;
+       min-height: 100vh;
+       flex-direction: column;
+     }
+
+     main {
+       flex: 1 0 auto;
      }
      </style>
 </head>
 <body>
   <nav>
+
   <!--- NAVIGATION BAR--->
+
    <div class="nav-wrapper blue darken-3">
      <div class="center">
-       <img src="../static/images/logo.png" alt="logo">
+       <img class="logo" src="../static/images/logo.png" alt="logo">
      </div>
    </div>
  </nav>
+
  <!--- MAIN PAGE INFO --->
+
  <h4 class="center-align">Welcome</h4>
  <h5 class="center-align">Please, sign in below</h5>
+
+<!--- LOGIN FORM --->
 
  <form class="entrance_exit" method="POST" action="/login">
    {{ form.hidden_tag() }}
@@ -57,9 +83,13 @@
       </div>
   </form>
 
-<!--- Compiled and minified JavaScript -->
+  <!--- JS SCRIPTS --->
+
+  <!--- Compiled and minified JavaScript -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+  <!--- Auto resize text inside input fields --->
   <script>
   $('#textarea1').val('New Text');
   M.textareaAutoResize($('#textarea1'));

@@ -12,20 +12,13 @@ payload = "{\n    \"api_key\": \"u7dcdj52df45y7a0avcba8idu56g17d4\",\n    \"id_g
 
 headers = {
     'Content-Type': "application/json",
-    'Accept': "*/*",
     'Cache-Control': "no-cache",
-    'Host': "sf-dkt-gates-store-api-2214.herokuapp.com",
-    'Accept-Encoding': "gzip, deflate",
-    'Content-Length': "72",
-    'Referer': "https://sf-dkt-gates-store-api-2214.herokuapp.com/alerts/theft",
-    'Connection': "keep-alive",
-    'cache-control': "no-cache"
     }
 
 
 def get_pic():
     '''
-    returning a list, containing a sorted data to display an entrance data
+    returning a list, containing sorted data to display an entrance/exit detected alarms
     '''
     response = requests.request("GET", url, data=payload, headers=headers)
     obj = response.json()
