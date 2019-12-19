@@ -123,13 +123,13 @@
         <div class="card-title activator grey-text text-darken-4 small text_size">
           <p><b>{{ item.brand }}</b></p>
           <p><b>{{ item.name }}</b></p>
-          <p><b>{{ item.time }}</b><i class="blue-text text-darken-2 right">more info</i></p>
+          <p><b>{{ item.time }}<i class="blue-text text-darken-2 right">more info</i></b></p>
         </div>
       </div>
       <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">{{ item.brand }}<i class="material-icons right">close</i></span>
-        <p>{{ item.brand }}</p>
-        <p><b>{{ item.name }}</b></p>
+        <span class="card-title grey-text text-darken-4">Additional Info<i class="material-icons right">close</i></span>
+        <p><b>Brand </b>{{ item.brand }}</p>
+        <p><b>Product name </b>{{ item.name }}</p>
         <p><b>Size </b>{{ item.size }}</p>
         <p><b>EPC </b><span class="border">{{ item.epc }}</span></p>
         <p><b>EAN13 </b><span class="border">{{ item.ean13 }}</span></p>
