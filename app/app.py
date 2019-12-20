@@ -2,11 +2,6 @@ from flask import Flask, flash, make_response, request, render_template, redirec
 from datetime import timedelta
 from app.forms import LoginForm
 from werkzeug.security import check_password_hash
-import logging
-#logging.basicConfig(format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S', '/logs/logggg.log')
-#logging.debug('This message should go to the log file')
-#logging.info('So should this')
-#logging.warning('And this, too')
 
 flask_app = Flask(__name__)
 flask_app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
@@ -44,7 +39,6 @@ def unauthorized():
 
 @flask_app.route('/')
 def index():
-#    return(render_template("index.html"))
     return(redirect(url_for("login")))
 
 @flask_app.route('/login', methods=['GET', 'POST'])
@@ -62,14 +56,12 @@ def login():
                 if user and check_password_hash(user.password, password):
                     session['email'] = email #saving the login for the session
                     login_user(user)
-#                    return "User logged in"
 #                    flash("You're now logged in!")
                     print('{} logged in successfully' .format(session['email']))
 #                    logging.warning('%s logged in successfully', session['email'])
 #                    my_logger.session_logger.info('%s logged in successfully', session['email'])
                     return(redirect(url_for('monitoring')))
                 else:
-#                   return "Wrong password"
 #                    flash("No user with that email/password combo")
                     print("login failed")
                     return(render_template('login.html', form=form))
