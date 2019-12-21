@@ -1,4 +1,4 @@
-from flask import Flask, flash, make_response, request, render_template, redirect, session, url_for
+from flask import Flask, make_response, request, render_template, redirect, session, url_for
 from datetime import timedelta
 from app.forms import LoginForm
 from werkzeug.security import check_password_hash
@@ -14,10 +14,10 @@ from flask_login import LoginManager, login_user, login_required, logout_user
 login_manager = LoginManager()
 login_manager.init_app(flask_app)
 
-import app.theft_exit_p
-import app.theft_exit_em
-import app.theft_rest_p
-import app.theft_rest_em
+import app.theft
+#import app.theft_exit_em
+#import app.theft_rest_p
+#import app.theft_rest_em
 #import app.my_logger
 
 @flask_app.before_request
@@ -39,6 +39,7 @@ def unauthorized():
 
 @flask_app.route('/')
 def index():
+#    return(render_template("index.html"))
     return(redirect(url_for("login")))
 
 @flask_app.route('/login', methods=['GET', 'POST'])
@@ -56,13 +57,11 @@ def login():
                 if user and check_password_hash(user.password, password):
                     session['email'] = email #saving the login for the session
                     login_user(user)
-#                    flash("You're now logged in!")
                     print('{} logged in successfully' .format(session['email']))
 #                    logging.warning('%s logged in successfully', session['email'])
 #                    my_logger.session_logger.info('%s logged in successfully', session['email'])
                     return(redirect(url_for('monitoring')))
                 else:
-#                    flash("No user with that email/password combo")
                     print("login failed")
                     return(render_template('login.html', form=form))
             else:
@@ -100,25 +99,25 @@ def gates_selection():
 @login_required
 def monitoring():
     if session['email'] == 'security_potrero' or session['email'] == 'lena':
-        pics = app.theft_exit_p.get_pic()
         gates_info = "Entrance/Exit"
+        pics = app.theft.get_pic("potrero", "entrance")
         return(render_template("monitoring.html", pics=pics, gates_info=gates_info))
-    elif session['email'] == 'security_emeryville' or session['email'] == 'lena':
-        pics = app.theft_exit_em.get_pic()
-        gates_info = "Entrance/Exit"
-        return(render_template("monitoring.html", pics=pics, gates_info=gates_info))
+#    elif session['email'] == 'security_emeryville' or session['email'] == 'lena':
+#        pics = app.theft_exit_em.get_pic()
+#        gates_info = "Entrance/Exit"
+#        return(render_template("monitoring.html", pics=pics, gates_info=gates_info))
 
 @flask_app.route("/monitoring-restroom")
 @login_required
 def monitoring_2():
     if session['email'] == 'security_potrero' or session['email'] == 'lena':
         gates_info = "Restroom"
-        pics = app.theft_rest_p.get_pic()
+        pics = app.theft.get_pic("potrero", "restroom")
         return(render_template("monitoring.html", pics=pics, gates_info=gates_info))
-    elif session['email'] == 'security_emeryville' or session['email'] == 'lena':
-        gates_info = "Restroom"
-        pics = app.theft_rest_em.get_pic()
-        return(render_template("monitoring.html", pics=pics, gates_info=gates_info))
+#    elif session['email'] == 'security_emeryville' or session['email'] == 'lena':
+#        gates_info = "Restroom"
+#        pics = app.theft_rest_em.get_pic()
+#        return(render_template("monitoring.html", pics=pics, gates_info=gates_info))
 
 def init_db():
     db.init_app(flask_app)
