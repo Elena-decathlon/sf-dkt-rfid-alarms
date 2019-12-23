@@ -102,10 +102,10 @@ def monitoring():
         gates_info = "Entrance/Exit"
         pics = app.theft.get_pic("potrero", "entrance")
         return(render_template("monitoring.html", pics=pics, gates_info=gates_info))
-#    elif session['email'] == 'security_emeryville' or session['email'] == 'lena':
-#        pics = app.theft_exit_em.get_pic()
-#        gates_info = "Entrance/Exit"
-#        return(render_template("monitoring.html", pics=pics, gates_info=gates_info))
+    elif session['email'] == 'security_emeryville' or session['email'] == 'lena':
+        gates_info = "Entrance/Exit"
+        pics = app.theft.get_pic("emeryville", "entrance")
+        return(render_template("monitoring.html", pics=pics, gates_info=gates_info))
 
 @flask_app.route("/monitoring-restroom")
 @login_required
@@ -114,10 +114,10 @@ def monitoring_2():
         gates_info = "Restroom"
         pics = app.theft.get_pic("potrero", "restroom")
         return(render_template("monitoring.html", pics=pics, gates_info=gates_info))
-#    elif session['email'] == 'security_emeryville' or session['email'] == 'lena':
-#        gates_info = "Restroom"
-#        pics = app.theft_rest_em.get_pic()
-#        return(render_template("monitoring.html", pics=pics, gates_info=gates_info))
+    elif session['email'] == 'security_emeryville' or session['email'] == 'lena':
+        gates_info = "Restroom"
+        pics = app.theft.get_pic("emeryville", "restroom")
+        return(render_template("monitoring.html", pics=pics, gates_info=gates_info))
 
 def init_db():
     db.init_app(flask_app)

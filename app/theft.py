@@ -12,6 +12,13 @@ payload_entrance_potrero = "{\n    \"api_key\": \"u7dcdj52df45y7a0avcba8idu56g17
 
 payload_restroom_potrero = "{\n    \"api_key\": \"u7dcdj52df45y7a0avcba8idu56g17d4\",\n    \"id_gate\": 2\n}"
 
+url_emrvl = "https://sf-dkt-gates-store-api-2213.herokuapp.com/alerts/theft"
+
+payload_entrance_emrvl = "{\n    \"api_key\": \"38abqtsf9siswqgtkg77okizizxfd9ky\",\n    \"id_gate\": 1\n}"
+
+payload_restroom_emrvl = "{\n    \"api_key\": \"38abqtsf9siswqgtkg77okizizxfd9ky\",\n    \"id_gate\": 2\n}"
+
+
 headers = {
     'Content-Type': "application/json",
     'Cache-Control': "no-cache",
@@ -26,6 +33,10 @@ def get_pic(store, gates):
         response = requests.request("GET", url=url_potrero, data=payload_entrance_potrero, headers=headers)
     elif store == "potrero" and gates == "restroom":
         response = requests.request("GET", url=url_potrero, data=payload_restroom_potrero, headers=headers)
+    elif store == "emeryville" and gates == "entrance":
+        response = requests.request("GET", url=url_emrvl, data = payload_entrance_emrvl, headers=headers)
+    elif store == "emeryville" and gates == "restroom":
+        response = requests.request("GET", url=url_emrvl, data = payload_restroom_emrvl, headers=headers)
     obj = response.json()
     gates = "entrance"
     info_list = []
