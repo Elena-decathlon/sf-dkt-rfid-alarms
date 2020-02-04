@@ -65,7 +65,7 @@ def login():
                     print("login failed")
                     return(render_template('login.html', form=form))
             else:
-                flash("user doesn't exist")
+#                flash("user doesn't exist")
                 return(redirect(url_for('login')))
     else:
         return(redirect(url_for('login')))
