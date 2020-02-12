@@ -69,6 +69,7 @@ def login():
                 return(redirect(url_for('login')))
     else:
         return(redirect(url_for('login')))
+    return(redirect(url_for('login')))
 
 #@flask_app.route('/protected')
 #@login_required
