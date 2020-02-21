@@ -54,6 +54,8 @@ def get_pic(store, gates):
             pic_check = str(i["product_picture"])
             if pic_check[0:4] == "http":
                 pic = "https" + pic_check[4:]
+            else:                                                          #handle the case, when product picture missing
+                pic = "../static/images/not_found.png"
             brand = i["product_brand"]
             size = i["product_size"]
         t_str = i["created"]
