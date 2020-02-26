@@ -1,22 +1,41 @@
 from datetime import datetime, timedelta
 import json
+import os
+from dotenv import load_dotenv
 import requests
 import sys
 import time
 
 import  app.decoder
 
+load_dotenv()
+
+POTRERO_API_KEY = os.getenv("POTRERO_API_KEY")
+EMERYVILLE_API_KEY = os.getenv("EMERYVILLE_API_KEY")
+
 url_potrero = "https://sf-dkt-gates-store-api-2214.herokuapp.com/alerts/theft"
 
-payload_entrance_potrero = "{\n    \"api_key\": \"u7dcdj52df45y7a0avcba8idu56g17d4\",\n    \"id_gate\": 1\n}"
+payload_entrance_potrero = {
+    "api_key": POTRERO_API_KEY, 
+    "id_gate": 1
+    }
 
-payload_restroom_potrero = "{\n    \"api_key\": \"u7dcdj52df45y7a0avcba8idu56g17d4\",\n    \"id_gate\": 2\n}"
+payload_restroom_potrero = {
+    "api_key": POTRERO_API_KEY,
+    "id_gate": 2
+    }
 
 url_emrvl = "https://sf-dkt-gates-store-api-2213.herokuapp.com/alerts/theft"
 
-payload_entrance_emrvl = "{\n    \"api_key\": \"38abqtsf9siswqgtkg77okizizxfd9ky\",\n    \"id_gate\": 1\n}"
+payload_entrance_emrvl = {
+    "api_key": EMERYVILLE_API_KEY,
+    "id_gate": 1
+    }
 
-payload_restroom_emrvl = "{\n    \"api_key\": \"38abqtsf9siswqgtkg77okizizxfd9ky\",\n    \"id_gate\": 2\n}"
+payload_restroom_emrvl = {
+    "api_key": EMERYVILLE_API_KEY,
+    "id_gate": 2
+    }
 
 
 headers = {
@@ -30,13 +49,13 @@ def get_pic(store, gates):
     returning a list, containing sorted data to display an entrance/exit detected alarms
     '''
     if store == "potrero" and gates == "entrance":
-        response = requests.request("GET", url=url_potrero, data=payload_entrance_potrero, headers=headers)
+        response = requests.request("GET", url=url_potrero, json = payload_entrance_potrero, headers=headers)
     elif store == "potrero" and gates == "restroom":
-        response = requests.request("GET", url=url_potrero, data=payload_restroom_potrero, headers=headers)
+        response = requests.request("GET", url=url_potrero, json = payload_restroom_potrero, headers=headers)
     elif store == "emeryville" and gates == "entrance":
-        response = requests.request("GET", url=url_emrvl, data = payload_entrance_emrvl, headers=headers)
+        response = requests.request("GET", url=url_emrvl, json = payload_entrance_emrvl, headers=headers)
     elif store == "emeryville" and gates == "restroom":
-        response = requests.request("GET", url=url_emrvl, data = payload_restroom_emrvl, headers=headers)
+        response = requests.request("GET", url=url_emrvl, json = payload_restroom_emrvl, headers=headers)
     obj = response.json()
     gates = "entrance"
     info_list = []
