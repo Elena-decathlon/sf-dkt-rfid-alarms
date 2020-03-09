@@ -1,10 +1,15 @@
-from flask import Flask, make_response, request, render_template, redirect, session, url_for
-from datetime import timedelta
+import os
+
 from app.forms import LoginForm
+from datetime import timedelta
+from dotenv import load_dotenv
+from flask import Flask, make_response, request, render_template, redirect, session, url_for
 from werkzeug.security import check_password_hash
 
+load_dotenv()
+
 flask_app = Flask(__name__)
-flask_app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
+flask_app.secret_key = os.getenv("FLASK_SECRET_KEY")
 flask_app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 flask_app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///user.db'
 

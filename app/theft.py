@@ -1,12 +1,12 @@
-from datetime import datetime, timedelta
+import app.decoder
 import json
 import os
-from dotenv import load_dotenv
 import requests
 import sys
 import time
 
-import  app.decoder
+from datetime import datetime, timedelta
+from dotenv import load_dotenv
 
 load_dotenv()
 
